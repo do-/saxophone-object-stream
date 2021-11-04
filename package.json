@@ -1,0 +1,14 @@
+{
+  "name": "saxophone-object-stream",
+  "version": "1.0.0",
+  "description": "Transforming binary xml stream to object stream using Saxophone",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "Dmitry Ovsyanko",
+  "license": "MIT",
+  "dependencies": {
+    "saxophone": "^0.7.2"
+  }
+}

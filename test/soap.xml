@@ -1,0 +1,40 @@
+<?xml version="1.0"?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header/>
+  <SOAP-ENV:Body>
+    <SendRequestRequest xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1" xmlns:ns0="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.1">
+      <SenderProvidedRequestData Id="Ue7e71ce1-7ce3-4ca5-a689-1a8f2edbb1af">
+        <MessageID>3931cda8-3245-11ec-b0bc-000c293433a0</MessageID>
+        <ns0:MessagePrimaryContent>
+          <ExportDebtRequestsRequest xmlns="urn:dom.gosuslugi.ru/debt-responses/1.0.0" xmlns:ns0="urn:dom.gosuslugi.ru/common/1.2.0">
+            <ns0:information-system-id>689e23b4-55da-4622-a561-18b6db9909b7</ns0:information-system-id>
+            <ns0:organization-id>35a86eef-48bb-4eb0-9c11-6bae5c0a00ba</ns0:organization-id>
+            <request-id>bac4c940-6ad3-11eb-9439-0242ac130002</request-id>
+          </ExportDebtRequestsRequest>
+        </ns0:MessagePrimaryContent>
+        <TestMessage xmlns:ns1="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1"/>
+      </SenderProvidedRequestData>
+      <CallerInformationSystemSignature>
+        <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+          <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+            <ds:Reference URI="#Ue7e71ce1-7ce3-4ca5-a689-1a8f2edbb1af">
+              <ds:Transforms>
+                <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                <ds:Transform Algorithm="urn://smev-gov-ru/xmldsig/transform"/>
+              </ds:Transforms>
+              <ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+              <ds:DigestValue>2BlS8uo68tyQ++KE1yPjj5y3TynCaRIXrXbpXeL5uPk=</ds:DigestValue>
+            </ds:Reference>
+          </ds:SignedInfo>
+          <ds:SignatureValue>9Th1waEJy83XQxxKD5DXT29g885RhJoYe3ZQ1HrbrQLCEBchCCTJtcThYmNBPL/HzF2gp7KQs3gXrnsj+OBlJQ==</ds:SignatureValue>
+          <ds:KeyInfo>
+            <ds:X509Data>
+              <ds:X509Certificate></ds:X509Certificate>
+            </ds:X509Data>
+          </ds:KeyInfo>
+        </ds:Signature>
+      </CallerInformationSystemSignature>
+    </SendRequestRequest>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
