@@ -9,6 +9,7 @@
             <ns0:information-system-id>689e23b4-55da-4622-a561-18b6db9909b7</ns0:information-system-id>
             <ns0:organization-id>35a86eef-48bb-4eb0-9c11-6bae5c0a00ba</ns0:organization-id>
             <request-id>bac4c940-6ad3-11eb-9439-0242ac130002</request-id>
+            <request-id>00000000-0000-0000-0000-000000000000</request-id>
           </ExportDebtRequestsRequest>
         </ns0:MessagePrimaryContent>
         <TestMessage xmlns:ns1="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1"/>

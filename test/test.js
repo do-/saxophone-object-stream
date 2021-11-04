@@ -21,9 +21,9 @@ async function test_soap () {
 	let get_is = () => fs.createReadStream (FN_SOAP)
 	
 	let l = await XMLReader.list (get_is (), {
-		level: 4,
-		//wrap: true,
-		localName: 'MessageID',
+		level: 3,
+//		wrap: true,
+		localName: 'SenderProvidedRequestData',
 	})
 console.log (JSON.stringify (l, null, 2))
 
