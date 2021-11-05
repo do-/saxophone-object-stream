@@ -11,7 +11,7 @@ async function test_list () {
 //	let get_is = () => fs.createReadStream (FN_LIST)
 	let get_is = () => fs.readFileSync (FN_LIST)
 	
-	let l = await XMLReader.list (get_is (), {
+	let l = await XMLReader.get (get_is (), {
 		fieldMap: {
 			ID: 'id',
 			NAME: 'label',
@@ -27,15 +27,17 @@ console.log (l)
 async function test_soap () {
 
 	let get_is = () => fs.createReadStream (FN_SOAP)
+//	let get_is = () => fs.readFileSync (FN_SOAP)
+	let src = get_is ()
 	
-	let l = await XMLReader.list (get_is (), {
+	let l = await XMLReader.get (src, {
 		level: 3,
-		wrap: true,
+//		wrap: true,
 //		filter: i => i.Id,
 //		nsPrefixes: 'use',
 //		nsPrefixes: 'ignore',
 //		noAttributes: true,
-//		localName: 'SenderProvidedRequestData',
+		localName: 'SenderProvidedRequestData',
 //		nameSpace: 'urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1',
 	})
 console.log (JSON.stringify (l, null, 2))
@@ -46,8 +48,8 @@ async function main () {
 
 	let not_now = Date.now ()
 
-	await test_list () 
-//	await test_soap () 
+//	await test_list () 
+	await test_soap () 
 
 console.log ((Date.now () - not_now) + ' ms')
 
