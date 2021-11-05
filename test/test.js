@@ -23,11 +23,12 @@ async function test_soap () {
 	let l = await XMLReader.list (get_is (), {
 		level: 3,
 		wrap: true,
-		nsPrefixes: 'use',
+		filter: i => i.Id,
+//		nsPrefixes: 'use',
 //		nsPrefixes: 'ignore',
 //		noAttributes: true,
-		localName: 'SenderProvidedRequestData',
-		nameSpace: 'urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1',
+//		localName: 'SenderProvidedRequestData',
+//		nameSpace: 'urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1',
 	})
 console.log (JSON.stringify (l, null, 2))
 
