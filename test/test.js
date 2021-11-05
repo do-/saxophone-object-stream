@@ -21,8 +21,9 @@ async function test_soap () {
 	let get_is = () => fs.createReadStream (FN_SOAP)
 	
 	let l = await XMLReader.list (get_is (), {
-		level: 0,
-		wrap: true,
+		level: 3,
+//		wrap: true,
+//		nsPrefixes: 'use',
 //		nsPrefixes: 'ignore',
 //		noAttributes: true,
 //		localName: 'SenderProvidedRequestData',
@@ -32,10 +33,13 @@ console.log (JSON.stringify (l, null, 2))
 }
 
 async function main () {
-console.log (Date.now ())
+
+	let not_now = Date.now ()
+
 //	await test_list () 
 	await test_soap () 
-console.log (Date.now ())
+
+console.log ((Date.now () - not_now) + ' ms')
 
 }
 
