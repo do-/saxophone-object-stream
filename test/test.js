@@ -10,7 +10,14 @@ async function test_list () {
 
 	let get_is = () => fs.createReadStream (FN_LIST)
 	
-	let l = await XMLReader.list (get_is (), {})
+	let l = await XMLReader.list (get_is (), {
+		fieldMap: {
+			ID: 'id',
+			NAME: 'label',
+			ISACTIVE: 'is_active',
+    	},
+		filter: i => i.is_active === 'true',
+	})
 
 console.log (l)
 
@@ -23,7 +30,7 @@ async function test_soap () {
 	let l = await XMLReader.list (get_is (), {
 		level: 3,
 		wrap: true,
-		filter: i => i.Id,
+//		filter: i => i.Id,
 //		nsPrefixes: 'use',
 //		nsPrefixes: 'ignore',
 //		noAttributes: true,
@@ -38,8 +45,8 @@ async function main () {
 
 	let not_now = Date.now ()
 
-//	await test_list () 
-	await test_soap () 
+	await test_list () 
+//	await test_soap () 
 
 console.log ((Date.now () - not_now) + ' ms')
 
