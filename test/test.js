@@ -23,7 +23,7 @@ async function test_soap () {
 	let l = await XMLReader.list (get_is (), {
 		level: 0,
 		wrap: true,
-		nsPrefixes: 'ignore',
+//		nsPrefixes: 'ignore',
 //		noAttributes: true,
 //		localName: 'SenderProvidedRequestData',
 	})
@@ -32,9 +32,10 @@ console.log (JSON.stringify (l, null, 2))
 }
 
 async function main () {
-
+console.log (Date.now ())
 //	await test_list () 
 	await test_soap () 
+console.log (Date.now ())
 
 }
 
