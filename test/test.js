@@ -23,6 +23,7 @@ async function test_soap () {
 	let l = await XMLReader.list (get_is (), {
 		level: 0,
 		wrap: true,
+//		noAttributes: true,
 //		localName: 'SenderProvidedRequestData',
 	})
 console.log (JSON.stringify (l, null, 2))
