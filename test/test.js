@@ -8,7 +8,8 @@ const {XMLReader} = require ('..')
 
 async function test_list () {
 
-	let get_is = () => fs.createReadStream (FN_LIST)
+//	let get_is = () => fs.createReadStream (FN_LIST)
+	let get_is = () => fs.readFileSync (FN_LIST)
 	
 	let l = await XMLReader.list (get_is (), {
 		fieldMap: {
