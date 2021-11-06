@@ -1,6 +1,6 @@
 `saxophone-object-stream` is a node.js module for transforming xml to object stream using [Saxophone](https://github.com/matteodelabre/saxophone).
 
-The [Motivation](https://github.com/do-/saxophone-object-stream/wiki/Motivation) behid this project is described in a separate article.
+The [Motivation](https://github.com/do-/saxophone-object-stream/wiki/Motivation) behid this project is described in a separate article. Its [wiki](https://github.com/do-/saxophone-object-stream/wiki) contains some more documentation on the topic.
 
 # Using
 As stream transformer:
