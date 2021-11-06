@@ -36,8 +36,8 @@ async function test_soap () {
 	let src = get_is ()
 	
 	let l = await XMLReader.get (src, {
-		level: 0,
-		wrap: true,
+		level: 3,
+//		wrap: true,
 //		filter: i => i.Id,
 //		nsPrefixes: 'use',
 //		nsPrefixes: 'ignore',
