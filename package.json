@@ -2,6 +2,12 @@
   "name": "saxophone-object-stream",
   "version": "0.0.1",
   "description": "Transforming binary xml stream to object stream using Saxophone",
+  "keywords": [
+    "xml",
+    "stream",
+    "sax",
+    "saxophone"
+  ], 
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
